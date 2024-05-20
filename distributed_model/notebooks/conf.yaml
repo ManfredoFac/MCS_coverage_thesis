@@ -1,0 +1,61 @@
+#distributed model
+
+path_gps: "../../../dataset/geo_life_full.csv"  #<users:  example_3users_traj; all: geolife_full_augmented.csv
+#path_gps: "../../../dataset/geolife_full_augmented.csv"
+#path_gps: "./geolife_reduced.csv"
+
+granularity: "min"
+
+start_date: "2009-05-08 00:00:00"
+    
+end_date: 
+    #- "2009-05-07 00:00:00"
+    #- "2009-05-15 00:00:00"
+    #- "2009-05-23 00:00:00"
+    - "2009-05-31 00:00:00"
+    #-  "2009-06-07 00:00:00"
+
+path_pois: "../../output/coverage/MIX.csv"     #3users: MIX_3users; all: MIX
+out_path: "../../output/distributed_model/test/"
+cov_series_path : "../../output/distributed_model/cov_series"
+#attack_path: "../../output/distributed_model/test/swap/random/" #directory random attack(swap)
+attack_path: "../../output/distributed_model/test/swap/attack2.2/4att/" #directory attack 2.2 (swap)
+#attack_path: "../../output/distributed_model/test/swap/attack2.2_euclidean/"  #directory attack 2.2 with euclidean distance metric for filter
+#attack_path: "../../output/distributed_model/test/swap/attack2_augmented/" #directory attack 2.0 with augmented dataset
+#attack_path: "../../output/distributed_model/test/swap/attack2_aug_euclidean/" #directory attack 2.0 with augmented dataset and euclidean distance metric for filter
+#attack_path: "../../output/distributed_model/test/swap/attack2_nofilter/" #directory attack 2.0 without any defence
+#attack_path: "../../output/distributed_model/test/attack/"  #distributed
+
+path_covmap: "swap_covmap_real.csv"    #(8-15) (8-31)
+#path_covmap: "./swap_covmap_real2.csv" #(16-23)
+#path_covmap: "./swap_covmap_real3.csv"  #(24-31)
+
+DETOUR_RADIUS: 800
+SCALE: 100
+scale_values:
+    #- 50
+    - 100
+    #- 500
+    #- 800
+detour_radius:
+    #- 100
+    #- 500
+    - 800
+
+# meters
+ADJACENCY_THRESHOLD: 300
+#ADJACENCY_THRESHOLD: -1
+
+filter_active: True
+#max_blacklist: 4
+perc_max_attackers: 20
+
+
+ageing_active: False
+powerlaw_a_param: 1
+powerlaw_k_param: 0
+
+beijing_lat_min: 39.54
+beijing_lat_max: 40.3
+beijing_lon_min: 115.75
+beijing_lon_max: 117.13

@@ -1,0 +1,6 @@
+cluster,probability
+1,9
+2,7
+0,6
+3,5
+4,2

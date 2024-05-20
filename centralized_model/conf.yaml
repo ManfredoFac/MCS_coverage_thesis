@@ -1,0 +1,74 @@
+#centralized model
+
+# GeoLife
+geolife_data_path: "../../dataset"
+
+#3users: example_3users_traj.csv; all: geolife_full_augmented
+#geolife_path: "../../../../datasets/mobility/Geolife_Trajectories_1.3/Data/geolife_full_augmented.csv"    
+geolife_path: "../../dataset/geo_life_full.csv"  #<users:  example_3users_traj; all: geolife_full_augmented.csv
+
+# path with the results of the GeoLife analysis
+geo_life_analysis_path: "../output/GeoLife_analysis/"
+
+out_path: "../output/coverage/"
+#3users only: MIX_3users.csv; all: MIX.csv
+poi_path: "../output/coverage/MIX.csv"          
+
+# reference period original
+start_time: "2008-07-01 00:00:00"
+end_time: "2009-12-31 23:59:59"
+
+# Beijing area
+beijing_lat_min: 39.54
+beijing_lat_max: 40.3
+beijing_lon_min: 115.75
+beijing_lon_max: 117.13
+speed_filter: 500
+
+########## 1 Stop place ##########
+stop_radius_factor: 0.1
+minutes_for_a_stop: 60
+spatial_radius_km: 0.1
+extended_medoids: 100
+cluster_radius_km: 0.2
+min_cluster_stop_sample: 4
+
+########## 2 Trajectory generation ##########
+# meters
+interpolation_distance: 200
+# number of trajectories according to the type
+n_cars: 0
+n_bikes: 0
+n_pedestrians: 100
+# mean number of trajectories for every user (mean = 102 from notebook 1)
+n_trajectory_user: 50
+
+########## 5 Locations Generator ##########
+beijing_center_lon: 116.3912757
+beijing_center_lat: 39.906217
+#meters
+distance_from_center: 50000
+#Grid box
+sw_lon: 115.7657
+sw_lat: 39.6332
+ne_lon: 116.7435
+ne_lat: 40.1411
+gripd_stepsize: 6561.68
+
+########## 6 Coverage Model ##########
+# Scale values of the exponentuial distribution (meters)
+scales_values:
+  - 50
+  #- 10
+
+# threshold used to filter out gps points too far.
+detour_radius: 800
+
+#this time interval is used to compute the coverage on a sub-period and not on the whole data set
+
+coverage_start_period: "2009-05-01 00:00:00"
+coverage_end_period: "2009-05-31 00:00:00"
+
+
+
+

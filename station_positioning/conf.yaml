@@ -1,0 +1,47 @@
+pathGeneral: "../output/station_positioning/"
+
+# percentage of the box's area to mark as un-admissibile
+unadmissible_values:
+  - 0.1
+  - 0.3
+  - 0.6
+
+  
+# radius of the un-admissible circles in meters
+unadmissible_circle_radius: 1000
+
+# scale to be used for the UAV deploy
+coverage_path: "../../output/coverage/scenario/mix/10.0/"
+scale_value: 10.0
+
+
+# box per il crop dei punti di coverage
+pathBox: "../../output/stations/box.shp"
+
+# scenari di coverate: bassa, alta, media
+pathDFLow: "../../output/stations/DFLow/"
+pathDFHigh: "../../output/stations/DFHigh/"
+pathDFNormal: "../../output/stations/DFNormal/"
+pathDFBorder: "../../output/stations/DFBorder/"
+pathDFFull: "../../output/stations/DFFull/"
+
+
+#max distance of the UAV in m (pyproj)
+uav_radius: 500
+
+# number of UAV stations to deploy
+uav_stations:
+    - 1
+    - 3
+    - 5
+    
+### StationPositioning
+#coverage thrashold (to select according to the coverage probability distribution)
+tau: 0.85
+
+### RANDOM
+# number of iterations for the random deployment strategy
+R0_iterations: 1000
+
+### DBSCAN
+min_samples: 2

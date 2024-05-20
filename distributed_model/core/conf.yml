@@ -1,0 +1,14 @@
+path_gps: "../../datasets/mobility/Geolife_Trajectories_1.3/Data/geolife_filtered.csv"
+granularity: "min"
+start_date: "2009-05-01 00:00:00"
+end_date: "2009-05-31 23:59:59"
+path_pois: "../output/coverage/pois_filtered.csv"
+out_path: "../output/distributed_model/future_work/"
+
+DETOUR_RADIUS: 1000
+SCALE: 50
+ADJACENCY_THRESHOLD: -1
+
+ageing_active: false
+powerlaw_a_param: 1
+powerlaw_k_param: 0
